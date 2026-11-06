@@ -6,7 +6,7 @@ QFrame#workbenchBanner {
     background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
         stop: 0 #162637, stop: 0.58 #1b2340, stop: 1 #30244c);
     border: 1px solid #384567;
-    border-radius: 14px;
+    border-radius: 10px;
 }
 
 QLabel#brandCaption {
@@ -17,11 +17,11 @@ QLabel#brandCaption {
 
 QLabel#workbenchHeading {
     color: #f4f7ff;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: bold;
 }
 
-QLabel#workspaceBadge, QLabel#lblDate {
+QLabel#lblDate {
     color: #a0e8e3;
     background-color: #1b3545;
     border: 1px solid #34586a;

@@ -2,7 +2,6 @@
 
 #include <QHBoxLayout>
 #include <QLabel>
-#include <QVBoxLayout>
 
 WorkbenchTitleBar::WorkbenchTitleBar(QWidget *parent)
     : QFrame(parent),
@@ -11,21 +10,18 @@ WorkbenchTitleBar::WorkbenchTitleBar(QWidget *parent)
     setObjectName(QStringLiteral("workbenchBanner"));
 
     auto *layout = new QHBoxLayout(this);
-    layout->setContentsMargins(20, 16, 20, 16);
+    layout->setContentsMargins(16, 6, 12, 6);
+    layout->setSpacing(12);
 
-    auto *brand = new QVBoxLayout;
-    brand->setSpacing(3);
     auto *caption = new QLabel(QStringLiteral("MSG / WORKBENCH"), this);
     caption->setObjectName(QStringLiteral("brandCaption"));
     auto *heading = new QLabel(tr("消息工作台"), this);
     heading->setObjectName(QStringLiteral("workbenchHeading"));
-    brand->addWidget(caption);
-    brand->addWidget(heading);
-    layout->addLayout(brand, 1);
+    layout->addWidget(caption, 0, Qt::AlignVCenter);
+    layout->addWidget(heading, 0, Qt::AlignVCenter);
+    layout->addStretch();
 
-    auto *badge = new QLabel(tr("本地工作区"), this);
-    badge->setObjectName(QStringLiteral("workspaceBadge"));
-    layout->addWidget(badge, 0, Qt::AlignVCenter);
+    m_windowControlsLayout->setSpacing(6);
     layout->addLayout(m_windowControlsLayout);
 }
 
