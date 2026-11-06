@@ -17,16 +17,21 @@ MessageWorkbenchWindow::MessageWorkbenchWindow(QWidget *parent)
     setObjectName(QStringLiteral("workbench"));
 
     auto *workbenchLayout = new QVBoxLayout(this);
-    workbenchLayout->setContentsMargins(22, 20, 22, 22);
-    workbenchLayout->setSpacing(16);
+    workbenchLayout->setContentsMargins(0, 0, 0, 0);
+    workbenchLayout->setSpacing(0);
 
     auto *titleBar = new WorkbenchTitleBar(this);
     attachTitleBar(titleBar, titleBar->windowControlsLayout());
     workbenchLayout->addWidget(titleBar);
 
+    // 只有三栏内容需要留白，标题栏直接贴住窗口边缘。
+    auto *contentLayout = new QVBoxLayout;
+    contentLayout->setContentsMargins(22, 16, 22, 22);
+    workbenchLayout->addLayout(contentLayout, 1);
+
     auto *splitter = new QSplitter(Qt::Horizontal, this);
     splitter->setChildrenCollapsible(false);
-    workbenchLayout->addWidget(splitter, 1);
+    contentLayout->addWidget(splitter);
 
     splitter->addWidget(m_messages);
     splitter->addWidget(m_composer);

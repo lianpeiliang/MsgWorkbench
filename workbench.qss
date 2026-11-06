@@ -5,13 +5,13 @@ QWidget#workbench, QDialog {
 QFrame#workbenchBanner {
     background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
         stop: 0 #162637, stop: 0.58 #1b2340, stop: 1 #30244c);
-    border: 1px solid #384567;
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid #384567;
 }
 
 QLabel#brandCaption {
     color: #80ede2;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: bold;
 }
 
