@@ -2,16 +2,14 @@
 #include "message_composer.h"
 #include "message_panel.h"
 #include "periodic_message_sender.h"
+#include "workbench_title_bar.h"
 
-#include <QFrame>
-#include <QHBoxLayout>
-#include <QLabel>
 #include <QMessageBox>
 #include <QSplitter>
 #include <QVBoxLayout>
 
 MessageWorkbenchWindow::MessageWorkbenchWindow(QWidget *parent)
-    : QWidget(parent),
+    : FramelessWindow(parent),
       m_messages(new MessagePanel),
       m_composer(new MessageComposer)
 {
@@ -22,23 +20,9 @@ MessageWorkbenchWindow::MessageWorkbenchWindow(QWidget *parent)
     workbenchLayout->setContentsMargins(22, 20, 22, 22);
     workbenchLayout->setSpacing(16);
 
-    auto *banner = new QFrame(this);
-    banner->setObjectName(QStringLiteral("workbenchBanner"));
-    auto *bannerLayout = new QHBoxLayout(banner);
-    bannerLayout->setContentsMargins(20, 16, 20, 16);
-    auto *brand = new QVBoxLayout;
-    brand->setSpacing(3);
-    auto *caption = new QLabel(QStringLiteral("MSG / WORKBENCH"), banner);
-    caption->setObjectName(QStringLiteral("brandCaption"));
-    auto *heading = new QLabel(tr("消息工作台"), banner);
-    heading->setObjectName(QStringLiteral("workbenchHeading"));
-    brand->addWidget(caption);
-    brand->addWidget(heading);
-    bannerLayout->addLayout(brand, 1);
-    auto *badge = new QLabel(tr("本地工作区"), banner);
-    badge->setObjectName(QStringLiteral("workspaceBadge"));
-    bannerLayout->addWidget(badge, 0, Qt::AlignVCenter);
-    workbenchLayout->addWidget(banner);
+    auto *titleBar = new WorkbenchTitleBar(this);
+    attachTitleBar(titleBar, titleBar->windowControlsLayout());
+    workbenchLayout->addWidget(titleBar);
 
     auto *splitter = new QSplitter(Qt::Horizontal, this);
     splitter->setChildrenCollapsible(false);

@@ -114,6 +114,30 @@ QPushButton:disabled, QLabel[page="true"]:disabled {
     border-color: #2b3a50;
 }
 
+QPushButton[windowControl="true"] {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+}
+
+QPushButton[windowControl="true"]:hover {
+    background-color: #3b4062;
+    border-color: #58688b;
+}
+
+QPushButton[windowControl="true"]:pressed {
+    background-color: #2b3250;
+}
+
+QPushButton[windowControl="true"]:focus {
+    border-color: #76e2dd;
+}
+
+QPushButton#closeWindowButton:hover {
+    background-color: #8f3148;
+    border-color: #a6485c;
+}
+
 QPushButton#addMessageButton {
     color: #102330;
     background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,

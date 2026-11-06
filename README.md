@@ -44,6 +44,8 @@ mingw32-make -j4
 ## 项目结构
 
 - [main.cpp](main.cpp) 启动 Qt 应用并加载主题。
+- [frameless_window.cpp](frameless_window.cpp) 实现 Windows 自绘标题栏的拖动、缩放和窗口按钮。
+- [workbench_title_bar.cpp](workbench_title_bar.cpp) 实现工作台顶部的标题和标识。
 - [message_workbench_window.cpp](message_workbench_window.cpp) 组装三栏界面，并连接输入与消息列表。
 - [message_composer.cpp](message_composer.cpp) 实现手动输入表单。
 - [periodic_message_sender.cpp](periodic_message_sender.cpp) 实现定时发送面板。

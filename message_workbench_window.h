@@ -1,12 +1,12 @@
 #ifndef MESSAGE_WORKBENCH_WINDOW_H
 #define MESSAGE_WORKBENCH_WINDOW_H
 
-#include <QWidget>
+#include "frameless_window.h"
 
 class MessageComposer;
 class MessagePanel;
 
-class MessageWorkbenchWindow : public QWidget
+class MessageWorkbenchWindow : public FramelessWindow
 {
     Q_OBJECT
 
