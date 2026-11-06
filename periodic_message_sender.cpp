@@ -19,7 +19,7 @@ PeriodicMessageSender::PeriodicMessageSender(QWidget *parent)
     layout->setContentsMargins(18, 16, 18, 16);
     layout->setSpacing(10);
 
-    auto *heading = new QLabel(tr("自动发消息"), this);
+    auto *heading = new QLabel(tr("自动发送消息"), this);
     heading->setProperty("sectionHeading", true);
     layout->addWidget(heading);
 
