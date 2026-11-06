@@ -25,9 +25,9 @@ PeriodicMessageSender::PeriodicMessageSender(QWidget *parent)
 
     auto *intervalLabel = new QLabel(tr("发送间隔"), this);
     intervalLabel->setBuddy(m_interval);
-    m_interval->setRange(1, 3600);
-    m_interval->setValue(2);
-    m_interval->setSuffix(tr(" 秒"));
+    m_interval->setRange(1, 3600000);
+    m_interval->setValue(2000);
+    m_interval->setSuffix(tr(" 毫秒"));
     layout->addWidget(intervalLabel);
     layout->addWidget(m_interval);
 
@@ -46,6 +46,7 @@ PeriodicMessageSender::PeriodicMessageSender(QWidget *parent)
     m_toggleButton->setCursor(Qt::PointingHandCursor);
     layout->addWidget(m_toggleButton, 0, Qt::AlignRight);
     connect(m_toggleButton, &QPushButton::clicked, this, &PeriodicMessageSender::toggleSending);
+    m_timer.setTimerType(Qt::PreciseTimer);
     connect(&m_timer, &QTimer::timeout, this, &PeriodicMessageSender::sendNext);
 }
 
@@ -74,7 +75,7 @@ void PeriodicMessageSender::toggleSending()
     m_interval->setEnabled(false);
     m_status->setText(tr("正在发送"));
     m_toggleButton->setText(tr("停止发送"));
-    m_timer.start(m_interval->value() * 1000);
+    m_timer.start(m_interval->value());
     sendNext();
 }
 
