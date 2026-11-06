@@ -1,5 +1,11 @@
 # MsgWorkbench · 消息工作台
 
+## 演示视频
+
+软件功能演示：
+
+https://github.com/user-attachments/assets/2d6ab74c-9e79-4f55-8bc9-e6d0dbca5c55
+
 MsgWorkbench 是一个用 C++ 和 Qt Widgets 编写的本地消息工作台。它可以手动录入消息，也可以按设定间隔生成测试消息，用来观察列表滚动、正文换行、筛选和历史查询的效果。
 
 ## 功能
