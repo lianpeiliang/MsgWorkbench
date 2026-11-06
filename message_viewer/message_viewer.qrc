@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/message_viewer">
+        <file>icon_delete.png</file>
+        <file>icon_info.png</file>
+        <file>icon_operation.png</file>
+        <file>icon_warning.png</file>
+    </qresource>
+</RCC>

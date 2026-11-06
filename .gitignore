@@ -1,0 +1,15 @@
+# Qt Creator 和 qmake 的本地文件
+*.pro.user*
+.qmake.stash
+.qmake.cache
+/Makefile
+/Makefile.Debug
+/Makefile.Release
+/build/
+/build-*/
+/debug/
+/release/
+
+# 本地运行数据和旧插件归档
+HisTipMsgs/
+/message_viewer/legacy/

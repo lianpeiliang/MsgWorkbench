@@ -1,0 +1,176 @@
+QWidget#workbench, QDialog {
+    background-color: #101520;
+}
+
+QFrame#workbenchBanner {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #162637, stop: 0.58 #1b2340, stop: 1 #30244c);
+    border: 1px solid #384567;
+    border-radius: 14px;
+}
+
+QLabel#brandCaption {
+    color: #80ede2;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+QLabel#workbenchHeading {
+    color: #f4f7ff;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+QLabel#workspaceBadge, QLabel#lblDate {
+    color: #a0e8e3;
+    background-color: #1b3545;
+    border: 1px solid #34586a;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+QWidget#MessagePanel, QFrame#composerPanel, QFrame#autoSenderPanel {
+    background-color: #192235;
+    border: 1px solid #2c3c56;
+    border-radius: 12px;
+}
+
+QLabel[sectionHeading="true"] {
+    color: #f1f5ff;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+QSplitter::handle:horizontal {
+    width: 12px;
+}
+
+/* 外框单独绘制，让列表内容和滚动条留在圆角以内。 */
+QFrame#messageListFrame {
+    background-color: #121a29;
+    border: 1px solid #33445e;
+    border-radius: 8px;
+}
+
+QListView#messageList {
+    color: #e2eaf7;
+    background-color: #121a29;
+    border: none;
+    selection-background-color: #325a78;
+    selection-color: #f1fcff;
+}
+
+QLineEdit, QPlainTextEdit, QTextEdit, QSpinBox {
+    color: #e2eaf7;
+    background-color: #121a29;
+    border: 1px solid #33445e;
+    border-radius: 7px;
+    selection-background-color: #325a78;
+    selection-color: #f1fcff;
+}
+
+QLineEdit, QPlainTextEdit, QTextEdit, QSpinBox {
+    padding: 6px 8px;
+}
+
+QLineEdit:focus, QPlainTextEdit:focus, QTextEdit:focus, QSpinBox:focus {
+    border-color: #62cdc9;
+}
+
+QLineEdit:disabled, QSpinBox:disabled {
+    color: #7d8da5;
+    background-color: #172131;
+}
+
+QLabel#autoSendStatus {
+    color: #a0e8e3;
+}
+
+QPushButton, QLabel[page="true"] {
+    color: #e2eaf7;
+    background-color: #23314a;
+    border: 1px solid #3b4e6c;
+    border-radius: 7px;
+    padding: 6px 9px;
+}
+
+QPushButton:hover, QLabel[page="true"]:hover {
+    background-color: #304562;
+    border-color: #6182a3;
+}
+
+QPushButton:focus {
+    border-color: #76e2dd;
+}
+
+QPushButton:pressed {
+    background-color: #1c293f;
+}
+
+QPushButton:disabled, QLabel[page="true"]:disabled {
+    color: #7d8da5;
+    background-color: #192334;
+    border-color: #2b3a50;
+}
+
+QPushButton#addMessageButton {
+    color: #102330;
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #75e8de, stop: 1 #a6b0ff);
+    border-color: #8ce3ed;
+    font-weight: bold;
+    padding: 8px 16px;
+}
+
+QPushButton#addMessageButton:hover, QPushButton#addMessageButton:focus {
+    background-color: #a9f5ec;
+    border-color: #e2fffd;
+}
+
+QPushButton#addMessageButton:pressed {
+    background-color: #76cad8;
+}
+
+QPushButton#addMessageButton:disabled {
+    color: #8797ad;
+    background-color: #202c40;
+    border-color: #35455c;
+}
+
+QDialog#MessageHistoryDialog QPushButton#pushButton,
+QDialog#MessageHistoryDialog QPushButton#pushButton_clearall {
+    color: #ffb4c2;
+}
+
+QScrollBar:vertical {
+    background-color: #121a29;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #425a75;
+    border-radius: 4px;
+    min-height: 24px;
+    margin: 2px 1px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #6486a1;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: transparent;
+}
+
+QToolTip {
+    color: #edf3fc;
+    background-color: #24314a;
+    border: 1px solid #4f6482;
+    padding: 4px;
+}
