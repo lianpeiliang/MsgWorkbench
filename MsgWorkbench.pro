@@ -16,5 +16,10 @@ HEADERS += \
     $$PWD/periodic_message_sender.h \
     $$PWD/workbench_title_bar.h
 RESOURCES += $$PWD/workbench.qrc
+win32: RC_ICONS = $$PWD/assets/msgworkbench.ico
+
+DISTFILES += \
+    $$PWD/assets/msgworkbench.svg \
+    $$PWD/assets/BOOTSTRAP-ICONS-LICENSE.txt
 
 include($$PWD/message_viewer/message_viewer.pri)

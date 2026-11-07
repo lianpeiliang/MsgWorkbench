@@ -55,3 +55,5 @@ mingw32-make -j4
 ## 第三方代码
 
 消息列表和绘制委托的部分实现源自 Michael Scopchanov 的 [SO-MessageLog](https://github.com/scopchanov/SO-MessageLog) 示例。相关源码保留了原版权声明和 MIT 许可证文本。
+
+应用图标改编自 Bootstrap Icons v1.13.1 的 [chat-left-text-fill](https://icons.getbootstrap.com/icons/chat-left-text-fill/)，调整了配色并增加背景。原图标使用 MIT 许可证，完整声明见 [BOOTSTRAP-ICONS-LICENSE.txt](assets/BOOTSTRAP-ICONS-LICENSE.txt)。可编辑的 SVG 和 Windows ICO 位于 [assets/](assets/)。

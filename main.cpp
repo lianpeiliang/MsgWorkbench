@@ -1,12 +1,15 @@
 #include <QApplication>
 #include <QFile>
+#include <QIcon>
 #include <QPalette>
 #include "message_workbench_window.h"
 
 int main(int argc, char *argv[])
 {
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("MsgWorkbench"));
+    app.setWindowIcon(QIcon(QStringLiteral(":/workbench/assets/msgworkbench.png")));
     app.setStyle(QStringLiteral("Fusion"));
     QFont font = app.font();
     font.setPointSize(10);

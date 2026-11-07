@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/workbench">
         <file>workbench.qss</file>
+        <file>assets/msgworkbench.png</file>
+        <file>assets/BOOTSTRAP-ICONS-LICENSE.txt</file>
     </qresource>
 </RCC>
