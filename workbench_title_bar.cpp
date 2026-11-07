@@ -16,8 +16,8 @@ WorkbenchTitleBar::WorkbenchTitleBar(QWidget *parent)
     layout->setSpacing(12);
 
     auto *logo = new QLabel(this);
-    logo->setPixmap(QApplication::windowIcon().pixmap(24, 24));
-    logo->setFixedSize(24, 24);
+    logo->setPixmap(QApplication::windowIcon().pixmap(28, 28));
+    logo->setFixedSize(28, 28);
     logo->setAccessibleName(tr("消息工作台图标"));
     layout->addWidget(logo, 0, Qt::AlignVCenter);
 
